@@ -1,1 +1,1 @@
-git add . && git commit -m 'learn update 1 sep 2022' && git push
+git add . && git commit -m 'learn update 2 sep 2022' && git push
