@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WarningAlertComponent implements OnInit {
 
+  alert_text = "I warn you not to touch me!";
+
   constructor() { }
 
   ngOnInit(): void {
