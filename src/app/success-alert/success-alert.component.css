@@ -1,3 +1,5 @@
 .success-alert{
-  color: green;
+  padding: 10px;
+  background-color: greenyellow;
+  border: green 1px solid;
 }

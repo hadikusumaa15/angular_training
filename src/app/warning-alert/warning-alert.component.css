@@ -1,3 +1,5 @@
 .warning-alert{
-  color: red;
+  padding: 10px;
+  background-color: pink;
+  border: red 1px solid;
 }
