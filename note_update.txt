@@ -1,1 +1,1 @@
-git add . && git commit -m 'add note' && git push
+git add . && git commit -m 'change app name to jira-pothijo' && git push
