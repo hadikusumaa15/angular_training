@@ -1,1 +1,1 @@
-git add . && git commit -m 'remove everything' && git push
+git add . && git commit -m 'generate angular new project' && git push
