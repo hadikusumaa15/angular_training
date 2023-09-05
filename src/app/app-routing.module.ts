@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'login',
-    pathMatch: 'full'
+    pathMatch: "full"
   },
   {
     path: 'login',
@@ -21,19 +21,18 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path: 'project',
+        path: 'projects',
         component: ProjectsComponent
       },
-
       {
         path: 'users',
         component: UsersComponent
       },
-
       {
         path: 'board',
         component: BoardComponent
       }
+
     ]
   }
 ];
