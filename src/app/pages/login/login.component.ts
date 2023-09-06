@@ -8,12 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
   loginObj: any = {
-    "userId": 0,
-    "emailId": "string",
+    "emailId": "broly",
     "fullName": "string",
-    "password": "string"
+    "password": "sontoloyo",
+    "montol": "kentang"
   }
 
   constructor(private http: HttpClient, private router: Router) {
@@ -21,14 +20,22 @@ export class LoginComponent {
   }
 
   onLogin() {
-    this.http.post("https://freeapi.miniprojectideas.com/api/Jira/Login",this.loginObj).subscribe((res:any)=>{
-      if(res.data) {
-        localStorage.setItem('jiraLoginDetails', JSON.stringify(res.data));
-        this.router.navigateByUrl('/board');
-      } else {
-        alert(res.message)
-      }
-    })
-  }
+    const loginUrl = "https://freeapi.miniprojectideas.com/api/Jira/Login";
 
+    this.http.post(loginUrl, this.loginObj).subscribe(
+      (response:any)=>{
+        if(typeof response !== 'object') { return alert('wrong data type')}
+        switch(response.data ? true : false){
+          case false:
+            alert(response.message);
+            return;
+          case true:
+            alert('successfully logged in!');
+            alert(JSON.stringify(response.data))
+            // this.router.navigateByUrl('/board')
+            return;
+        }
+      }
+    )
+  }
 }
